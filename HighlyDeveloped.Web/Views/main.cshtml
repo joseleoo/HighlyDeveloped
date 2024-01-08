@@ -13,6 +13,7 @@
             crossorigin = "anonymous"
         });
         Html.RequiresCss("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css");
+        Html.RequiresCss("/css/CookieConsent.css");
         Html.RequiresJs("https://code.jquery.com/jquery-3.2.1.slim.min.js", new
         {
             integrity = "sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN",
@@ -30,17 +31,26 @@
             crossorigin = "anonymous"
         });
         Html.RequiresJs("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js");
+        Html.RequiresJs("/scripts/CookieConsent.js");
     }
     @Html.RenderCssHere()
 
 
 </head>
 <body>
-   <!--Nav goes here!-->
+    <!--Nav goes here!-->
     @Html.Partial("NavBar")
     @RenderBody()
-    @Html.RenderJsHere()
+    <!--Footer!-->
     @Html.Partial("Footer")
+    <!--Cookie Consent!-->
+    <div class="alert text-center cookiealert" role="alert">
+        <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="/privacy/" target="_blank">Learn more</a>
+        <button type="button" class="btn btn-primary btn-sm acceptcookies">
+            I agree
+        </button>
+    </div>
+    @Html.RenderJsHere()
 </body>
-</html>
+    </html>
 
