@@ -17,7 +17,7 @@ using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 using Umbraco.ModelsBuilder.Embedded;
 
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "7422baeafd7016c8")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "3642095bcae65775")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedModels
@@ -269,6 +269,100 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for Call To Action Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.3")]
 		public static string GetCallToActionTitle(ICallToAction_ that) => that.Value<string>("callToActionTitle");
+	}
+
+	/// <summary>News Article</summary>
+	[PublishedModel("newsArticle")]
+	public partial class NewsArticle : PublishedContentModel
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.3")]
+		public new const string ModelTypeAlias = "newsArticle";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.3")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.3")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.3")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<NewsArticle, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public NewsArticle(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+
+		///<summary>
+		/// Article Content: The news content itself
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.3")]
+		[ImplementPropertyType("articleContent")]
+		public global::System.Web.IHtmlString ArticleContent => this.Value<global::System.Web.IHtmlString>("articleContent");
+
+		///<summary>
+		/// Article Image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.3")]
+		[ImplementPropertyType("articleImage")]
+		public global::Umbraco.Core.PropertyEditors.ValueConverters.ImageCropperValue ArticleImage => this.Value<global::Umbraco.Core.PropertyEditors.ValueConverters.ImageCropperValue>("articleImage");
+
+		///<summary>
+		/// Author: The article author
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.3")]
+		[ImplementPropertyType("author")]
+		public string Author => this.Value<string>("author");
+
+		///<summary>
+		/// Lead In: A sentence on what the article is about
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.3")]
+		[ImplementPropertyType("leadIn")]
+		public string LeadIn => this.Value<string>("leadIn");
+
+		///<summary>
+		/// News Categories: Tag the article
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.3")]
+		[ImplementPropertyType("newsCategories")]
+		public global::System.Collections.Generic.IEnumerable<string> NewsCategories => this.Value<global::System.Collections.Generic.IEnumerable<string>>("newsCategories");
+
+		///<summary>
+		/// Post Date: When the article was published
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.3")]
+		[ImplementPropertyType("postDate")]
+		public global::System.DateTime PostDate => this.Value<global::System.DateTime>("postDate");
+	}
+
+	/// <summary>News Articles</summary>
+	[PublishedModel("newsArticles")]
+	public partial class NewsArticles : PublishedContentModel
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.3")]
+		public new const string ModelTypeAlias = "newsArticles";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.3")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.3")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.3")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<NewsArticles, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public NewsArticles(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
 	}
 
 	/// <summary>Folder</summary>
