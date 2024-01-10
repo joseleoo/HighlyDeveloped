@@ -17,8 +17,8 @@ using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 using Umbraco.ModelsBuilder.Embedded;
 
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "3642095bcae65775")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "aabceaed9ffc4fa0")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedModels
 {
@@ -193,6 +193,34 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.3")]
 		[ImplementPropertyType("testMode")]
 		public bool TestMode => this.Value<bool>("testMode");
+
+		///<summary>
+		/// Twitter Access Token: This is the access token for the Twitter API
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.3")]
+		[ImplementPropertyType("twitterAccessToken")]
+		public string TwitterAccessToken => this.Value<string>("twitterAccessToken");
+
+		///<summary>
+		/// Twitter Access Token Secret: This is the private key for the access
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.3")]
+		[ImplementPropertyType("twitterAccessTokenSecret")]
+		public string TwitterAccessTokenSecret => this.Value<string>("twitterAccessTokenSecret");
+
+		///<summary>
+		/// Twitter Consumer API Key: The consumer API key
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.3")]
+		[ImplementPropertyType("twitterConsumerAPIKey")]
+		public string TwitterConsumerApikey => this.Value<string>("twitterConsumerAPIKey");
+
+		///<summary>
+		/// Twitter Consumer Secret API Key: The secret consumer key
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.3")]
+		[ImplementPropertyType("twitterConsumerSecretAPIKey")]
+		public string TwitterConsumerSecretApikey => this.Value<string>("twitterConsumerSecretAPIKey");
 	}
 
 	// Mixin Content Type with alias "callToAction_"

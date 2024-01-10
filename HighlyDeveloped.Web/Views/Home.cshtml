@@ -43,7 +43,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-
+             
             <!--lastest news cards-->
 
             @Html.Partial("Lastest News")
@@ -55,7 +55,8 @@
 <div class="container">
     <div class="row">
         <div class="col">
-@Umbraco.RenderMacro("GetLatestTweets", new {twitterHandle="lejos89"})
+            @Html.Action("GetTweets", "Twitter", new { twitterHandle = "lejos89" })
+            @Umbraco.RenderMacro("GetLatestTweets", new { twitterHandle = "lejos89" })
         </div>
     </div>
 </div>
