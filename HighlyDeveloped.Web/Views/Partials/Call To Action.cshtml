@@ -1,5 +1,5 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
-@*@using Umbraco.Core.Models*@
+@using Umbraco.Web.Models
 <section class="bg-light">
     <div class="container">
         <div class="row">
@@ -7,13 +7,13 @@
                 <h1 class="display-4">@Model.Value("callToActionTitle")</h1>
                 <p class="lead">@Model.Value("callToActionText")</p>
                 <!--Button or Link form CTA-->
-                @*@{
+                @{
                     var link = Model.Value<Link>("callToActionLink");
                     if (link != null)
                     {
                         <a href="@link.Url" target="@link.Target" class="btn btn-outline-secondary">@link.Name</a>
                     }
-                }*@
+                }
             </div>
         </div>
     </div>
